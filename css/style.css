@@ -1,0 +1,10 @@
+@import url('./reset.css');
+@import url('./global.css');
+
+body {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	font-size: calc(var(--size-index)*0.8);
+	font-family: raleway_c, sans-serif;
+	line-height: 1.8;
+}
