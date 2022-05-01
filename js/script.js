@@ -1,6 +1,5 @@
 //3D Scroll
-
-let zSpacing = -1000
+let zSpacing = -1500
 let lastPosition = zSpacing / 5
 let zValues = []
 
@@ -11,16 +10,22 @@ window.addEventListener('scroll', () => {
 	let top = document.documentElement.scrollTop
 	let delta = lastPosition - top
 
-
-	console.log(top, delta);
 	lastPosition = top
 
 	$framesArray.forEach((frame, index) => {
 		zValues.push((index * zSpacing) + zSpacing)
-		zValues[index] += delta * -5
+		zValues[index] += delta * -2
+		let translateZ = `translateZ(${zValues[index]}px)`
 
-		let transform = `transform: translateZ(${zValues[index]}px)`
-		frame.setAttribute('style', transform)
+		let opacity;
+		if ((zValues[index] < Math.abs(zSpacing) / 1.8) && !(Math.abs(zValues[index]) > 2000)) {
+			opacity = 1
+		} else {
+			opacity = 0
+		}
+
+		frame.setAttribute('style', `transform: ${translateZ}; opacity: ${opacity}`)
 	})
 })
 
+window.scrollTo(0, 1)

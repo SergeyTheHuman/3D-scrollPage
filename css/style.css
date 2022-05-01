@@ -7,7 +7,8 @@ body {
 	font-size: calc(var(--size-index)*0.8);
 	font-family: raleway_c, sans-serif;
 	line-height: 1.8;
-	height: var(--depth);
+	height: calc(var(--depth)*2.25);
+	font-weight: 300;
 }
 
 .gallery-container {
@@ -29,4 +30,90 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: var(--transition), opacity 0.5s ease;
+	will-change: transform;
+	transform-style: preserve-3d;
+	opacity: 0;
+}
+
+.frame__content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.frame__grid {
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, calc(var(--size-index)*15));
+	column-gap: calc(var(--gutter)*1);
+}
+
+.frame__title {
+	font-size: calc(var(--size-index)*2.5);
+	font-weight: 100;
+	width: min-content;
+	line-height: 1;
+	text-align: center;
+}
+
+.frame__title:last-child {
+	width: unset;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.5;
+
+}
+
+.frame__col {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 100;
+}
+
+.frame__image {
+	width: 100%;
+	object-fit: contain;
+}
+
+.frame__text {
+	font-size: calc(var(--size-index)*1.5);
+}
+
+.frame__title_telegram,
+.frame__title_mail {
+	position: relative;
+	font-size: calc(var(--size-index)*1.5);
+	padding-left: calc(var(--size-index)*2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.frame__title_telegram::before {
+	content: '';
+	width: calc(var(--size-index)*1.5);
+	height: calc(var(--size-index)*1.5);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background: url('../images/icons/icons8-telegram-app.svg') center / contain no-repeat;
+}
+
+.frame__title_mail::before {
+	content: '';
+	width: calc(var(--size-index)*1.5);
+	height: calc(var(--size-index)*1.5);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background: url('../images/icons/email-svgrepo-com.svg') center / contain no-repeat;
 }
