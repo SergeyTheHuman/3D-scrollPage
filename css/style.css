@@ -1,6 +1,11 @@
 @import url('./reset.css');
 @import url('./global.css');
 
+html,
+body {
+	/* cursor: url('../images/icons/white-cursor.png'), default; */
+}
+
 body {
 	background-color: var(--color-black);
 	color: var(--color-white);
@@ -66,6 +71,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	line-height: 1.5;
+	/* cursor: url('../images/icons/text-cursor.png'), text; */
 }
 
 .frame__col {

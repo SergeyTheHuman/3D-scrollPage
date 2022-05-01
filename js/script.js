@@ -1,10 +1,12 @@
 // 3D Scroll
-let zSpacing = -1500
+const zSpacing = -1500
 let lastPosition = zSpacing / 5
 let zValues = []
 
-let $frames = document.querySelectorAll('.gallery__frame')
-let $framesArray = Array.from($frames)
+const $frames = document.querySelectorAll('.gallery__frame')
+const $framesArray = Array.from($frames)
+const body = document.body;
+const html = document.documentElement;
 
 window.addEventListener('scroll', () => {
 	let top = document.documentElement.scrollTop
@@ -29,7 +31,6 @@ window.addEventListener('scroll', () => {
 })
 
 window.scrollTo(0, 1)
-
 
 // Audio
 
