@@ -3,7 +3,7 @@
 
 html,
 body {
-	/* cursor: url('../images/icons/white-cursor.png'), default; */
+	cursor: url('../images/icons/white-cursor.png'), default;
 }
 
 body {
@@ -71,7 +71,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	line-height: 1.5;
-	/* cursor: url('../images/icons/text-cursor.png'), text; */
+	cursor: url('../images/icons/text-cursor.png'), text;
 }
 
 .frame__col {
