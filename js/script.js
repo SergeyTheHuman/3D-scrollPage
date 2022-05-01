@@ -5,8 +5,11 @@ let zValues = []
 
 const $frames = document.querySelectorAll('.gallery__frame')
 const $framesArray = Array.from($frames)
-const body = document.body;
-const html = document.documentElement;
+const $video = document.querySelector('.video')
+
+document.addEventListener('DOMContentLoaded', () => {
+	$video.playbackRate = 3
+})
 
 window.addEventListener('scroll', () => {
 	let top = document.documentElement.scrollTop
