@@ -117,3 +117,18 @@ body {
 	transform: translateY(-50%);
 	background: url('../images/icons/email-svgrepo-com.svg') center / contain no-repeat;
 }
+
+.sound-button {
+	position: fixed;
+	cursor: pointer;
+	z-index: 5;
+	bottom: calc(var(--size-index)*1);
+	right: calc(var(--size-index)*1.5);
+	width: calc(var(--size-index)*2);
+	height: calc(var(--size-index)*2);
+	transition: opacity 0.3s ease-in-out;
+}
+
+.sound-button.paused {
+	opacity: 0.25;
+}

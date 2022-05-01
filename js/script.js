@@ -1,4 +1,4 @@
-//3D Scroll
+// 3D Scroll
 let zSpacing = -1500
 let lastPosition = zSpacing / 5
 let zValues = []
@@ -29,3 +29,23 @@ window.addEventListener('scroll', () => {
 })
 
 window.scrollTo(0, 1)
+
+
+// Audio
+
+let $soundButton = document.querySelector('.sound-button')
+let $audio = document.querySelector('.audio')
+$audio.volume = 0.25;
+
+$soundButton.addEventListener('click', e => {
+	$soundButton.classList.toggle('paused')
+	$audio.paused ? $audio.play() : $audio.pause()
+})
+
+window.onfocus = () => {
+	$soundButton.classList.contains('paused') ? $audio.pause() : $audio.play()
+}
+
+window.onblur = () => {
+	$audio.pause()
+}
