@@ -131,3 +131,9 @@ body {
 .sound-button.paused {
 	opacity: 0.25;
 }
+
+@media (max-width:600px) {
+	.frame__grid {
+		column-gap: calc(var(--gutter)*0.33);
+	}
+}
