@@ -9,10 +9,10 @@ body {
 body {
 	background-color: var(--color-black);
 	color: var(--color-white);
-	font-size: calc(var(--size-index)*0.8);
+	font-size: calc(var(--size-index) * 0.8);
 	font-family: raleway_c, sans-serif;
 	line-height: 1.8;
-	height: calc(var(--depth)*2.25);
+	height: calc(var(--depth) * 2.25);
 	font-weight: 300;
 }
 
@@ -52,12 +52,12 @@ body {
 .frame__grid {
 	height: 100%;
 	display: grid;
-	grid-template-columns: repeat(2, calc(var(--size-index)*15));
-	column-gap: calc(var(--gutter)*1);
+	grid-template-columns: repeat(2, calc(var(--size-index) * 15));
+	column-gap: calc(var(--gutter) * 1);
 }
 
 .frame__title {
-	font-size: calc(var(--size-index)*2.5);
+	font-size: calc(var(--size-index) * 2.5);
 	font-weight: 100;
 	width: min-content;
 	line-height: 1;
@@ -88,49 +88,62 @@ body {
 }
 
 .frame__text {
-	font-size: calc(var(--size-index)*1.5);
+	font-size: calc(var(--size-index) * 1.5);
 }
 
 .frame__title_telegram,
-.frame__title_mail {
+.frame__title_mail,
+.frame__title_github {
 	position: relative;
-	font-size: calc(var(--size-index)*1.5);
-	padding-left: calc(var(--size-index)*2);
+	font-size: calc(var(--size-index) * 1.5);
+	padding-left: calc(var(--size-index) * 2);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-.frame__title_telegram::before {
+.frame__title_github::before {
 	content: '';
-	width: calc(var(--size-index)*1.5);
-	height: calc(var(--size-index)*1.5);
+	width: calc(var(--size-index) * 1.5);
+	height: calc(var(--size-index) * 1.5);
 	position: absolute;
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	background: url('../images/icons/icons8-telegram-app.svg') center / contain no-repeat;
+	background: url('../images/icons/github.svg') center / contain no-repeat;
+}
+
+.frame__title_telegram::before {
+	content: '';
+	width: calc(var(--size-index) * 1.5);
+	height: calc(var(--size-index) * 1.5);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background: url('../images/icons/icons8-telegram-app.svg') center / contain
+		no-repeat;
 }
 
 .frame__title_mail::before {
 	content: '';
-	width: calc(var(--size-index)*1.5);
-	height: calc(var(--size-index)*1.5);
+	width: calc(var(--size-index) * 1.5);
+	height: calc(var(--size-index) * 1.5);
 	position: absolute;
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	background: url('../images/icons/email-svgrepo-com.svg') center / contain no-repeat;
+	background: url('../images/icons/email-svgrepo-com.svg') center / contain
+		no-repeat;
 }
 
 .sound-button {
 	position: fixed;
 	cursor: pointer;
 	z-index: 5;
-	bottom: calc(var(--size-index)*1);
-	right: calc(var(--size-index)*1.5);
-	width: calc(var(--size-index)*2);
-	height: calc(var(--size-index)*2);
+	bottom: calc(var(--size-index) * 1);
+	right: calc(var(--size-index) * 1.5);
+	width: calc(var(--size-index) * 2);
+	height: calc(var(--size-index) * 2);
 	transition: opacity 0.3s ease-in-out;
 }
 
@@ -154,8 +167,8 @@ body {
 	opacity: 0.36;
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
 	.frame__grid {
-		column-gap: calc(var(--gutter)*0.33);
+		column-gap: calc(var(--gutter) * 0.33);
 	}
 }
