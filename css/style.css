@@ -100,6 +100,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	display: block;
 }
 .frame__title_github::before {
 	content: '';
@@ -111,6 +112,24 @@ body {
 	transform: translateY(-50%);
 	background: url('../images/icons/github.svg') center / contain no-repeat;
 }
+.frame__title_github-link {
+	cursor: pointer;
+}
+.frame__title_github-link:hover .frame__title_github:after {
+	transform: scaleX(1);
+}
+
+.frame__title_github:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #ffffff;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	transition: transform 0.3s ease;
+	transform: scaleX(0);
+}
 
 .frame__title_telegram::before {
 	content: '';
@@ -120,8 +139,7 @@ body {
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	background: url('../images/icons/icons8-telegram-app.svg') center / contain
-		no-repeat;
+	background: url('../images/icons/icons8-telegram-app.svg') center / contain no-repeat;
 }
 
 .frame__title_mail::before {
@@ -132,8 +150,7 @@ body {
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	background: url('../images/icons/email-svgrepo-com.svg') center / contain
-		no-repeat;
+	background: url('../images/icons/email-svgrepo-com.svg') center / contain no-repeat;
 }
 
 .sound-button {
